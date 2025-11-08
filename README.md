@@ -2,6 +2,11 @@
 New Repository for Array Lab
 # Non-Duplicated-Integer-Array-Operations
 
+// Name: Alex Griggs
+// Course: CISC 192 - C++ Programming
+// Date: 11/02/2025
+// Assignment: Non-Duplicated Integer Array Operations
+
 ```
 #include <iostream>
 #include <array>
@@ -10,13 +15,13 @@ using namespace std;
 
 int main() {
     const int n = 5;
-    array<int, n> numbers;
+	array<int, n> numbers; //create an array of size n
     int choice;
 
-    while (true) { // Main loop
-        // Step 1: Input numbers
+    while (true) { // Main loop for repeated operations
+        //Input numbers
         while (true) {
-            cout << "\nEnter " << n << " integers separated by spaces: ";
+            cout << "\nPlease enter " << n << " integers: ";
             for (int i = 0; i < n; i++) {
                 cin >> numbers[i];
             }
@@ -31,10 +36,10 @@ int main() {
             }
 
             if (i == n - 1) break; // no duplicates found
-            cout << "Duplicates detected. Please enter unique integers\n";
+            cout << "Duplicates detected. Please enter the array again.\n";
         }
 
-        // Step 2: Menu
+        //Menu
         while (true) {
             cout << "\nChoose an operation:\n";
             cout << "1) Sort ascending\n";
@@ -54,7 +59,7 @@ int main() {
 
             switch (choice) {
             case 1:
-                // Sort ascending (bubble sort)
+                // Sort ascending
                 for (int i = 0; i < n - 1; i++)
                     for (int j = 0; j < n - i - 1; j++)
                         if (numbers[j] > numbers[j + 1]) {
