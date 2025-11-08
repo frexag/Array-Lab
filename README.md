@@ -13,7 +13,7 @@ int main() {
     array<int, n> numbers;
     int choice;
 
-    while (true) { // Main loop for repeated operations
+    while (true) { // Main loop
         // Step 1: Input numbers
         while (true) {
             cout << "\nEnter " << n << " integers separated by spaces: ";
@@ -31,7 +31,7 @@ int main() {
             }
 
             if (i == n - 1) break; // no duplicates found
-            cout << "Duplicates detected. Please enter the array again.\n";
+            cout << "Duplicates detected. Please enter unique integers\n";
         }
 
         // Step 2: Menu
